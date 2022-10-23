@@ -7,14 +7,46 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
+  background-color: #5594d6;
+  color: gray;
   line-height: 1.5;
+
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font: inherit;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+h1::before {
+  content: '🗺️';
+  margin-right: 10px;
 }
 
 #search-box {
   font: inherit;
+  font-weight: 700;
+  color: #5594d6;
+  text-align: center;
+
   padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  width: 400px;
+  margin-bottom: 32px;
+
+  border-radius: 0.5rem;
+  border-style: groove;
+  border: 2px solid gray;
+}
+
+#search-box::placeholder {
+  color: gray;
+}
+
+#search-box:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem white;
 }
