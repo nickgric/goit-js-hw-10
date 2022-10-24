@@ -27,6 +27,50 @@ h1::before {
   margin-right: 10px;
 }
 
+.notiflix-notify {
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  border-style: groove;
+  border: 2px solid gray;
+  box-shadow: 0 0 0 0.1rem white;
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+}
+
+.country-list-item-image {
+  border: 1px solid gray;
+}
+
+.country-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font: inherit;
+  font-weight: 700;
+  color: #5594d6;
+
+  background-color: white;
+
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 400px;
+  margin-bottom: 4px;
+  margin-left: 0;
+
+  border-radius: 0.5rem;
+  border-style: groove;
+  border: 2px solid gray;
+}
+
 #search-box {
   font: inherit;
   font-weight: 700;
@@ -35,7 +79,7 @@ h1::before {
 
   padding: 8px;
   width: 400px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
   border-radius: 0.5rem;
   border-style: groove;

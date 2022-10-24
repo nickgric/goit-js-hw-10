@@ -3,6 +3,9 @@ import { Notify } from 'notiflix';
 Notify.init({
   fontSize: '16px',
   useIcon: false,
+  position: 'center-bottom',
+  width: '400px',
+  clickToClose: true,
   success: {
     background: '#419527',
     notiflixIconColor: 'white',
@@ -22,7 +25,7 @@ Notify.init({
 });
 
 export function fetchCountries(countryName) {
-  fetch(`https://restcountries.com/v3.1/name/${countryName}?fields=name.official,capital,population,flags.svg,languages
+  return fetch(`https://restcountries.com/v3.1/name/${countryName.trim()}?fields=name,capital,population,flags,languages
   `)
     .then(response => {
       if (!response.ok) {
@@ -41,15 +44,10 @@ export function fetchCountries(countryName) {
       if (data.length === 1) {
         Notify.success(`😎 Only one countrie found!!!`);
       }
-      let name;
-      let capital;
-      let population;
-      let flag;
-      let languages;
-
-      console.log(data);
+      return data;
     })
     .catch(error => {
       Notify.failure('😫 No countries found...');
+      console.log(error);
     });
 }
