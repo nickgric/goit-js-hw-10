@@ -46,6 +46,8 @@ export function fetchCountries(countryName) {
       let population;
       let flag;
       let languages;
+
+      console.log(data);
     })
     .catch(error => {
       Notify.failure('😫 No countries found...');
